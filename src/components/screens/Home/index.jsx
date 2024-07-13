@@ -9,7 +9,7 @@ const Home = () => {
     console.log(initData?.user);
   }, [initData]);
 
-  return <div className={styles.root}>dsds</div>;
+  return <div className={styles.root}>dsdsffdd</div>;
 };
 
 export default Home;
