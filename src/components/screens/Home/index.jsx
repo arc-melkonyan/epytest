@@ -3,13 +3,13 @@ import styles from './Home.module.scss';
 import { useInitData } from '@telegram-apps/sdk-react';
 
 const Home = () => {
-  const [initData] = useInitData();
+  const initData = useInitData();
 
   React.useEffect(() => {
     console.log(initData?.user);
   }, [initData]);
 
-  return <div className={styles.root}>dsdsffdd</div>;
+  return <div className={styles.root}>dsdsffddds</div>;
 };
 
 export default Home;
