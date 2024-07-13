@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { useInitData, usePopup, useUtils } from '@telegram-apps/sdk-react';
+import { useInitData, useUtils } from '@telegram-apps/sdk-react';
 import { TonConnectButton } from '@tonconnect/ui-react';
 
 const Home = () => {
