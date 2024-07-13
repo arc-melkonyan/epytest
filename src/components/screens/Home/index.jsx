@@ -6,10 +6,10 @@ const Home = () => {
   const [initData] = initInitData();
 
   React.useEffect(() => {
-    console.log(initData);
+    console.log(initData?.user);
   }, [initData]);
 
-  return <div className={styles.root}></div>;
+  return <div className={styles.root}>dsds</div>;
 };
 
 export default Home;
