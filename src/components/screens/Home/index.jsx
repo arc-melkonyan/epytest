@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { initInitData } from '@telegram-apps/sdk';
+import { useInitData } from '@telegram-apps/sdk-react';
 
 const Home = () => {
-  const [initData] = initInitData();
+  const [initData] = useInitData();
 
   React.useEffect(() => {
     console.log(initData?.user);
