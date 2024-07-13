@@ -5,9 +5,9 @@ import { SDKProvider } from '@telegram-apps/sdk-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <SDKProvider acceptCustomStyles debug>
+  <SDKProvider acceptCustomStyles debug>
+    <BrowserRouter>
       <App />
-    </SDKProvider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </SDKProvider>,
 );
