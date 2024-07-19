@@ -21,59 +21,61 @@ const Home = () => {
     );
   }, []);
 
-  const getuser = async () => {
-    try {
-      const userReq = await fetch('http://localhost:5000/validate', {
-        method: 'POST',
-        headers: {
-          Authorization: `tma ${initDataRaw}`,
-        },
-      });
-      const json = await userReq.json();
-      setUser(json);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  return '';
 
-  const onClickBy = async () => {
-    try {
-      const transaction = {
-        validUntil: Math.floor(Date.now() / 1000) + 360,
-        messages: [
-          {
-            address: '0:a7694fadce021d90f1b9b4807dfc24ba16e98a1e87cc7f119e3073a6159c5b9d', // destination address
-            amount: '10814781', //Toncoin in nanotons
-            payload: 'te6cckEBAQEADwAAGgAAAAB0b3JuZXQ2NiHbJVwE',
-          },
-        ],
-      };
+  // const getuser = async () => {
+  //   try {
+  //     const userReq = await fetch('http://localhost:5000/validate', {
+  //       method: 'POST',
+  //       headers: {
+  //         Authorization: `tma ${initDataRaw}`,
+  //       },
+  //     });
+  //     const json = await userReq.json();
+  //     setUser(json);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-      const res = await tonConnectUI.sendTransaction(transaction);
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const onClickBy = async () => {
+  //   try {
+  //     const transaction = {
+  //       validUntil: Math.floor(Date.now() / 1000) + 360,
+  //       messages: [
+  //         {
+  //           address: '0:a7694fadce021d90f1b9b4807dfc24ba16e98a1e87cc7f119e3073a6159c5b9d', // destination address
+  //           amount: '10814781', //Toncoin in nanotons
+  //           payload: 'te6cckEBAQEADwAAGgAAAAB0b3JuZXQ2NiHbJVwE',
+  //         },
+  //       ],
+  //     };
 
-  React.useEffect(() => {
-    getuser();
-  }, [initDataRaw]);
+  //     const res = await tonConnectUI.sendTransaction(transaction);
+  //     console.log(res);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  return (
-    <div className={styles.root}>
-      {user && <div className={styles.user}>{user.username.substring(0, 1).toUpperCase()}</div>}
+  // React.useEffect(() => {
+  //   getuser();
+  // }, [initDataRaw]);
 
-      <button
-        onClick={() => utils.shareURL('https://t.me/mybot/myapp', 'Look! Some cool app here!')}>
-        Connect Wallet
-      </button>
+  // return (
+  //   <div className={styles.root}>
+  //     {user && <div className={styles.user}>{user.username.substring(0, 1).toUpperCase()}</div>}
 
-      <button onClick={onClickBy}>Send transaction</button>
+  //     <button
+  //       onClick={() => utils.shareURL('https://t.me/mybot/myapp', 'Look! Some cool app here!')}>
+  //       Connect Wallet
+  //     </button>
 
-      <TonConnectButton />
-    </div>
-  );
+  //     <button onClick={onClickBy}>Send transaction</button>
+
+  //     <TonConnectButton />
+  //   </div>
+  // );
 };
 
 export default Home;
