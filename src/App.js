@@ -3,8 +3,8 @@ import { initNavigator } from '@telegram-apps/sdk-react';
 import { useEffect, useMemo } from 'react';
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import './styles.scss';
-
 import Home from './components/screens/Home';
+import 'buffer';
 
 function App() {
   const navigator = useMemo(() => initNavigator('app-navigation-state'), []);

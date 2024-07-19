@@ -5,7 +5,9 @@ import { TonConnectUIProvider } from '@tonconnect/ui-react';
 const Root = () => {
   return (
     <SDKProvider>
-      <TonConnectUIProvider manifestUrl="https://charming-pegasus-d932d3.netlify.app/tonconnect-manifest.json">
+      <TonConnectUIProvider
+        twaReturnUrl="https://t.me/epytest_bot/app"
+        manifestUrl="https://charming-pegasus-d932d3.netlify.app/tonconnect-manifest.json">
         <App />
       </TonConnectUIProvider>
     </SDKProvider>
