@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './Home.module.scss';
-import { retrieveLaunchParams, useInitData, useUtils } from '@telegram-apps/sdk-react';
-import { TonConnectButton, useTonConnectUI } from '@tonconnect/ui-react';
+// import styles from './Home.module.scss';
+// import { retrieveLaunchParams, useInitData, useUtils } from '@telegram-apps/sdk-react';
+// import { TonConnectButton, useTonConnectUI } from '@tonconnect/ui-react';
 
 const Home = () => {
-  const [user, setUser] = React.useState(null);
-  const { initDataRaw } = retrieveLaunchParams();
-  const utils = useUtils();
-  const [tonConnectUI, setOptions] = useTonConnectUI();
+  // const [user, setUser] = React.useState(null);
+  // const { initDataRaw } = retrieveLaunchParams();
+  // const utils = useUtils();
+  // const [tonConnectUI, setOptions] = useTonConnectUI();
 
   React.useEffect(() => {
     window.addEventListener(
